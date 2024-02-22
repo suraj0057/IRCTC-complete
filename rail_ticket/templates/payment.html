@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .payment-form input {
+            width: calc(100% - 20px);
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .payment-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="payment-container">
+    <h1>Payment Form</h1>
+    <form class="payment-form" action="/print_ticket" method="post">
+        {% csrf_token %}
+        <label>Card Number: </label>
+        <input type="text" id="cardNumber" placeholder="Card Number" required pattern="\d{16}"
+               title="Please enter a valid 16-digit card number" value="1234123412341234"><br>
+        <label>Expiry Date: </label>
+        <input type="text" id="expirationDate" placeholder="Expiration Date (MM/YYYY)" required
+               pattern="^(0[1-9]|1[0-2])\/\d{4}$" title="Please enter a valid expiration date in MM/YYYY format"
+               value="01/2020"><br>
+        <label> CVV: </label>
+        <input type="text" id="cvv" placeholder="CVV" required pattern="\d{3}"
+               title="Please enter a valid 3-digit CVV" value="123"><br>
+        <label>Amount:</label>
+        <input type="text" id="amount" placeholder="Amount" required pattern="\d+(\.\d{1,2})?"
+               title="Please enter a valid amount" value="{{payment}}" readonly><br>
+        <button type="submit">Pay Now</button>
+        <input type="hidden" id="paymentStatus" name="paymentStatus" value="">
+        <input type="hidden" id="ticketDetails" name="ticketDetails" value="{{ticketJsonData}}">
+    </form>
+    <div class="error-message" id="errorMessage"></div>
+</div>
+
+<script>
+
+        const form = document.querySelector('.payment-form');
+        const errorMessage = document.querySelector('#errorMessage');
+
+        form.addEventListener('submit', function (event) {
+            const cardNumber = document.getElementById('cardNumber');
+            const expirationDate = document.getElementById('expirationDate');
+            const cvv = document.getElementById('cvv');
+            const amount = document.getElementById('amount');
+
+            if (!cardNumber.checkValidity() || !expirationDate.checkValidity() || !cvv.checkValidity() || !amount.checkValidity()) {
+                event.preventDefault();
+                errorMessage.textContent = 'Please fill out all fields correctly.';
+            }
+        });
+
+</script>
+</body>
+
+</html>

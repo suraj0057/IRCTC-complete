@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="IRCTC Next Generation eTicketing System">
+    <meta name="theme-color" content="#213d77">
+    <title>IRCTC Next Generation eTicketing System</title>
+    l̥
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAD9/Pz//////9u6uf+5enj/woqJ/8KKif/CjIr/r2hm/92/vv/Po6L/2rm4/8ucmv+waWf/48nJ///////+/f3//fz8///////Uraz/sGpo/6NRT/+rX13/sGln/8qbmf/dv7//tnVz/8GJh/+0cG7/z6Sj/+LHxv///////v39//7+/v//////7Nra/+LIx//XsrH/2rm4/+/h4P/Gk5H/4cTD/9Clo//Xs7L/6NTU/8mYlv/x5eT///////7+/v///////v7+///////t3dz/7Nzc//7+/v///////////+/y8f/t8vL/8uXl/+bR0P/27u3///////7+/v////////////////+9goH/xJCP//jy8v///v7/9/T0/9rV1P/Z1dT/8vX1/7Z4dv9/DQn/hhoX/7Nwbv/+/Pz////////////PpKP/m0JA////////////9fb2/+ft7P/5/Pz////////////v5uX/0ayq/9Gnpv+RMC3/0Kel////////////s29s/6BMSf//////9/j4/+DX1//YtbT/1Kuq/+rY2P/u3t7/8+vq//f7+///////4cbF/72CgP///////////8qamf+EFhP/1LKx//z////kzMz/hRcU/6VVU//NoJ//lTc0/+nU1P/w8vL/+/v6//Tq6v/Uraz////////////17ez/ljc0/8uiof//////5c7O/48sKf/iycj/yJiW/4khHf/w4OD/8vX1//Lz8v/48PD/7d7e///////+/v7//////+TU1P/18PD//////+XOzf+NJyT/iB0a/8qbmv+nWFb/6NDQ//f7+//o5uX///////37+//////////////////k5eX/1NHQ//f7+//r2Nj/nkZE/51FQv/TrKv/rmdl/+vX1//4+/v/4d/e///////+/v7//////////////////Pv7/+rp6P/Z19b/4N7d/+7r6v/7+fn//fv7//z5+f//////8fHw/9vZ2f////////////////////////////////////////////Pz8//o5+b/6Ofm//Dv7v/y7u3/8OXl/+zo6P/i4eH///////////////////////////////////////v39//79vb/////////////////plpY/5Q3NP/38fH///////7+/v/////////////////////////////////+/v7/2rq5/9/Cwf/z6en/wIeF/4MUEP/JmZf///////78/P///////////////////////////////////v7///////r29v/HlJP/nENA/44qJ//Bion//v39////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+        rel="icon" type="image/x-icon">
+    <link
+        href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAD9/Pz//////9u6uf+5enj/woqJ/8KKif/CjIr/r2hm/92/vv/Po6L/2rm4/8ucmv+waWf/48nJ///////+/f3//fz8///////Uraz/sGpo/6NRT/+rX13/sGln/8qbmf/dv7//tnVz/8GJh/+0cG7/z6Sj/+LHxv///////v39//7+/v//////7Nra/+LIx//XsrH/2rm4/+/h4P/Gk5H/4cTD/9Clo//Xs7L/6NTU/8mYlv/x5eT///////7+/v///////v7+///////t3dz/7Nzc//7+/v///////////+/y8f/t8vL/8uXl/+bR0P/27u3///////7+/v////////////////+9goH/xJCP//jy8v///v7/9/T0/9rV1P/Z1dT/8vX1/7Z4dv9/DQn/hhoX/7Nwbv/+/Pz////////////PpKP/m0JA////////////9fb2/+ft7P/5/Pz////////////v5uX/0ayq/9Gnpv+RMC3/0Kel////////////s29s/6BMSf//////9/j4/+DX1//YtbT/1Kuq/+rY2P/u3t7/8+vq//f7+///////4cbF/72CgP///////////8qamf+EFhP/1LKx//z////kzMz/hRcU/6VVU//NoJ//lTc0/+nU1P/w8vL/+/v6//Tq6v/Uraz////////////17ez/ljc0/8uiof//////5c7O/48sKf/iycj/yJiW/4khHf/w4OD/8vX1//Lz8v/48PD/7d7e///////+/v7//////+TU1P/18PD//////+XOzf+NJyT/iB0a/8qbmv+nWFb/6NDQ//f7+//o5uX///////37+//////////////////k5eX/1NHQ//f7+//r2Nj/nkZE/51FQv/TrKv/rmdl/+vX1//4+/v/4d/e///////+/v7//////////////////Pv7/+rp6P/Z19b/4N7d/+7r6v/7+fn//fv7//z5+f//////8fHw/9vZ2f////////////////////////////////////////////Pz8//o5+b/6Ofm//Dv7v/y7u3/8OXl/+zo6P/i4eH///////////////////////////////////////v39//79vb/////////////////plpY/5Q3NP/38fH///////7+/v/////////////////////////////////+/v7/2rq5/9/Cwf/z6en/wIeF/4MUEP/JmZf///////78/P///////////////////////////////////v7///////r29v/HlJP/nENA/44qJ//Bion//v39////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+        rel="apple-touch-icon" type="image/x-icon">
+    <link async="async" rel="stylesheet" as="style"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="preconnect" crossorigin="" href="https://cdn.jsdelivr.net">
+    <link async="async" crossorigin="" rel="stylesheet" as="style"
+        href="https://cdn.jsdelivr.net/npm/primeng@9.0.5/resources/primeng.min.css">
+    <link async="async" crossorigin="" rel="stylesheet" as="style"
+        href="https://cdn.jsdelivr.net/npm/primeng@9.0.5/resources/themes/nova-light/theme.css">
+    <link async="async" crossorigin="" rel="stylesheet" as="style"
+        href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async=""
+        src="https://www.googletagmanager.com/gtag/js?id=G-7K0RMWL72E&amp;l=dataLayer&amp;cx=c"></script>
+    <script type="text/javascript" async=""
+        src="https://www.googletagmanager.com/gtag/js?id=G-NFN218243Z&amp;l=dataLayer&amp;cx=c"></script>
+    <script type="text/javascript" async=""
+        src="https://www.googletagmanager.com/gtag/js?id=UA-122267849-1&amp;l=dataLayer&amp;cx=c"></script>
+    <script async="async" as="script" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="preload" crossorigin="" href="https://fonts.gstatic.com/s/quicksand/v7/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2"
+        as="font">
+    <meta name="theme-color" content="#1976d2">
+    <script> window._izq = window._izq || []; window._izq.push(["init"]); </script>
+
+    <link rel="stylesheet" href="/nget/styles.a571e53e5e430238872d.css">
+    <style></style>
+    <style>
+        .alert[_ngcontent-baq-c54] {
+            left: 10px;
+            bottom: 4vh;
+            position: fixed;
+            font-size: 2em;
+            width: auto;
+            max-width: 280px;
+            background: brown;
+            padding: 10px 0;
+            color: #fff;
+            z-index: 1
+        }
+
+        .margin-top[_ngcontent-baq-c54] {
+            margin-top: 0
+        }
+
+        @media(min-width:1303px) {
+            .header-fix[_ngcontent-baq-c54] {
+                position: fixed;
+                top: 0;
+                z-index: 99;
+                background: #fff
+            }
+
+            .margin-top[_ngcontent-baq-c54] {
+                margin-top: 10px
+            }
+        }
+    </style>
+    <style>
+        .h_container[_ngcontent-baq-c48],
+        .h_container_sm[_ngcontent-baq-c48] {
+            position: relative;
+            background-color: #f8f9fa
+        }
+
+        .h_logo[_ngcontent-baq-c48] {
+            height: 100px;
+            padding: 10px
+        }
+
+        .h_logo_left_div[_ngcontent-baq-c48] {
+            top: 3px;
+            left: 30px;
+            position: absolute
+        }
+
+        .h_logo_right_div[_ngcontent-baq-c48] {
+            top: 4px;
+            width: 80px;
+            right: 40px;
+            position: absolute
+        }
+
+        .h_menu_drop_button[_ngcontent-baq-c48] {
+            position: absolute;
+            right: 0;
+            padding: 0 10px;
+            border: 2px solid #eaeaea;
+            font-size: 3rem;
+            margin: 5px;
+            top: 10px;
+            z-index: 1000
+        }
+
+        .h_menu_drop_button[_ngcontent-baq-c48] a[_ngcontent-baq-c48] {
+            color: #bbb
+        }
+
+        .h_clear_bottom[_ngcontent-baq-c48] {
+            height: 20px;
+            background-color: #fff
+        }
+
+        img[_ngcontent-baq-c48] {
+            vertical-align: middle;
+            border-style: none
+        }
+
+        .h_main_div[_ngcontent-baq-c48] {
+            padding: 20px 0
+        }
+
+        .h_head1[_ngcontent-baq-c48] a[_ngcontent-baq-c48],
+        .h_head1[_ngcontent-baq-c48] span[_ngcontent-baq-c48] {
+            color: #000;
+            font-size: 14px;
+            padding: 0 8px;
+            text-decoration: none
+        }
+
+        .h_head2[_ngcontent-baq-c48] {
+            margin: 16px 0;
+            font-weight: 700
+        }
+
+        @media (max-width:1302px) {
+            .h_container[_ngcontent-baq-c48] {
+                display: none
+            }
+
+            .h_container_sm[_ngcontent-baq-c48] {
+                display: block
+            }
+
+            .h_logo_right_div[_ngcontent-baq-c48] {
+                position: relative;
+                float: right;
+                right: 93px
+            }
+
+            .h_logo[_ngcontent-baq-c48] {
+                height: 80px;
+                padding: 10px
+            }
+
+            .h_head1[_ngcontent-baq-c48],
+            .h_head2[_ngcontent-baq-c48] {
+                display: none;
+                padding-right: 0
+            }
+
+            li[_ngcontent-baq-c48]>ul.child-drop[_ngcontent-baq-c48] {
+                box-shadow: 1px 1px 4px 1px #555
+            }
+
+            .row[_ngcontent-baq-c48] {
+                margin-right: 0;
+                margin-left: 0
+            }
+        }
+
+        @media (min-width:1303px) {
+            .h_container[_ngcontent-baq-c48] {
+                display: contents
+            }
+
+            .h_container_sm[_ngcontent-baq-c48] {
+                display: none
+            }
+
+            .h_head1[_ngcontent-baq-c48] {
+                margin-left: 0
+            }
+        }
+
+        nav[_ngcontent-baq-c48] {
+            display: inline-block
+        }
+
+        @media (min-width:1800px) {
+            .h_head1[_ngcontent-baq-c48] {
+                margin-left: -15px
+            }
+        }
+
+        @media (min-width:1304px) {
+            .h_head2[_ngcontent-baq-c48] {
+                padding-left: 140px;
+                padding-right: 120px
+            }
+        }
+
+        .moblogo[_ngcontent-baq-c48] {
+            margin-bottom: 0;
+            color: #2e3192;
+            padding-left: 50px
+        }
+
+        @media (max-width:767px) {
+            .moblogo[_ngcontent-baq-c48] {
+                color: #fff !important;
+                left: -45px !important
+            }
+
+            .h_clear_bottom[_ngcontent-baq-c48] {
+                height: 52px;
+                background-color: #213d77
+            }
+
+            .h_menu_drop_button[_ngcontent-baq-c48],
+            .h_menu_drop_button[_ngcontent-baq-c48] a[_ngcontent-baq-c48] {
+                border: 0 solid;
+                color: #fff !important
+            }
+
+            .position-slider[_ngcontent-baq-c48] {
+                position: right
+            }
+
+            .h_logo_right_div[_ngcontent-baq-c48] {
+                display: none
+            }
+        }
+
+        @media (max-width:567px) and (min-width:320px) {
+            .moblogo[_ngcontent-baq-c48] {
+                color: #fff !important;
+                left: -45px !important
+            }
+
+            .h_menu_drop_button[_ngcontent-baq-c48] a[_ngcontent-baq-c48] {
+                border: 0 solid;
+                color: #fff !important
+            }
+
+            .position-slider[_ngcontent-baq-c48] {
+                position: left
+            }
+        }
+
+        @media (max-width:768px) {
+            [_nghost-baq-c48] .ui-sidebar.ui-widget.ui-widget-content.ui-shadow.ui-sidebar-active.ui-sidebar-left {
+                margin-top: 50px;
+                overflow: scroll;
+                padding-bottom: 50px
+            }
+
+            li[_ngcontent-baq-c48]>ul.child-drop[_ngcontent-baq-c48] {
+                box-shadow: 1px 1px 4px 1px #555
+            }
+        }
+
+        .contactUsInfo[_ngcontent-baq-c48] {
+            font-weight: 700
+        }
+
+        [_nghost-baq-c48] .ui-widget-content .contactUsInfo a {
+            color: #1756a7 !important
+        }
+
+        .loginText[_ngcontent-baq-c48] {
+            color: #fff !important;
+            font-weight: 700;
+            display: inline !important;
+            padding: 7px 8px !important
+        }
+
+        .tooltipp[_ngcontent-baq-c48] {
+            position: relative;
+            display: inline-block;
+            color: #1457a7
+        }
+
+        .tooltipptext[_ngcontent-baq-c48] {
+            visibility: hidden;
+            width: 180px;
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            border-radius: 3px;
+            padding: 2px 1px;
+            font-size: 1.1rem;
+            position: absolute;
+            z-index: 99999;
+            bottom: 100%;
+            left: 0
+        }
+
+        .tooltipp[_ngcontent-baq-c48]:hover .tooltipptext[_ngcontent-baq-c48] {
+            visibility: visible
+        }
+
+        .blinking[_ngcontent-baq-c48] {
+            color: #be2a2a;
+            -webkit-animation: blinkingText 1s infinite;
+            animation: blinkingText 1s infinite
+        }
+
+        @-webkit-keyframes blinkingText {
+            0% {
+                color: #be2a2a
+            }
+
+            50% {
+                color: #000
+            }
+
+            to {
+                color: #be2a2a
+            }
+        }
+
+        @keyframes blinkingText {
+            0% {
+                color: #be2a2a
+            }
+
+            50% {
+                color: #000
+            }
+
+            to {
+                color: #be2a2a
+            }
+        }
+
+        .magzter[_ngcontent-baq-c48] {
+            min-width: 150px !important
+        }
+
+        @media (max-width:1456px) and (min-width:1303px) {
+            .header-icon-menu[_ngcontent-baq-c48] {
+                font-weight: 700 !important
+            }
+
+            .h_head1[_ngcontent-baq-c48] a[_ngcontent-baq-c48],
+            .h_head1[_ngcontent-baq-c48] span[_ngcontent-baq-c48],
+            .header-icon-menu[_ngcontent-baq-c48] {
+                font-size: 11px !important
+            }
+        }
+
+        label[_ngcontent-baq-c48]>span.caret[_ngcontent-baq-c48] {
+            color: #333 !important
+        }
+
+        .child-drop[_ngcontent-baq-c48] li[_ngcontent-baq-c48] {
+            box-shadow: 0 0 #555 !important
+        }
+
+        .overlay[_ngcontent-baq-c48] {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: opacity .5s;
+            visibility: visible;
+            opacity: 1;
+            z-index: 2
+        }
+
+        .overlay[_ngcontent-baq-c48],
+        .popup[_ngcontent-baq-c48] {
+            position: absolute
+        }
+
+        .popup[_ngcontent-baq-c48] {
+            margin: 70px auto;
+            padding: 23px;
+            background: #fff;
+            border-radius: 5px;
+            width: 50%;
+            transition: all 5s ease-in-out;
+            left: 360px;
+            border: 3px solid #212121
+        }
+
+        .popup[_ngcontent-baq-c48] h2[_ngcontent-baq-c48] {
+            margin-top: 0;
+            color: #2307c0;
+            font-family: Tahoma, Arial, sans-serif
+        }
+
+        .popup[_ngcontent-baq-c48] .close[_ngcontent-baq-c48] {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            transition: all .2s;
+            font-size: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            color: #333
+        }
+
+        .popup[_ngcontent-baq-c48] .close[_ngcontent-baq-c48]:hover {
+            color: #06d85f;
+            cursor: pointer
+        }
+
+        .popup[_ngcontent-baq-c48] .content[_ngcontent-baq-c48] {
+            max-height: 100%;
+            overflow: auto
+        }
+
+        @media screen and (max-width:700px) {
+            .popup[_ngcontent-baq-c48] {
+                width: 100%
+            }
+        }
+    </style>
+    <style>
+        .footer-icons[_ngcontent-baq-c49] {
+            padding-bottom: .5rem !important;
+            padding-top: .5rem !important;
+            margin-bottom: .25rem !important;
+            font-size: xx-large;
+            background-image: linear-gradient(270deg, #9b4b90 0, #2c215d);
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+            line-height: 55px
+        }
+
+        .footer-icons[_ngcontent-baq-c49] span[_ngcontent-baq-c49] a[_ngcontent-baq-c49] {
+            box-shadow: 0 5px 11px 0 rgb(0 0 0/18%), 0 4px 15px 0 rgb(0 0 0/15%);
+            width: 47px;
+            height: 47px;
+            position: relative;
+            z-index: 1;
+            text-decoration: none;
+            vertical-align: middle;
+            display: inline-block;
+            overflow: hidden;
+            transition: all .2s ease-in-out;
+            margin: 7px 5px !important;
+            line-height: 47px;
+            border-radius: 50%;
+            padding: 0;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer
+        }
+    </style>
+    <style>
+        .vMarqueeDivOuter[_ngcontent-baq-c70] {
+            background-color: #efefef;
+            padding: 0 10px;
+            color: #1457a7
+        }
+
+        .vMarqueeDiv[_ngcontent-baq-c70] {
+            height: 4em;
+            margin: 1em auto;
+            padding: 5px 0;
+            overflow: hidden;
+            background: #fff
+        }
+
+        .vMarquee[_ngcontent-baq-c70],
+        .vMarqueeDiv[_ngcontent-baq-c70] {
+            position: relative;
+            box-sizing: border-box
+        }
+
+        .vMarquee[_ngcontent-baq-c70] {
+            top: 4em;
+            -webkit-animation: vMarquee 15s linear infinite;
+            animation: vMarquee 15s linear infinite
+        }
+
+        @-webkit-keyframes vMarquee {
+            0% {
+                top: 4em
+            }
+
+            10% {
+                top: 0
+            }
+
+            90% {
+                top: 0
+            }
+
+            to {
+                top: -4em
+            }
+        }
+
+        @keyframes vMarquee {
+            0% {
+                top: 4em
+            }
+
+            10% {
+                top: 0
+            }
+
+            90% {
+                top: 0
+            }
+
+            to {
+                top: -4em
+            }
+        }
+
+        @media (max-width:567px) and (min-width:320px) {
+            .slanted-div[_ngcontent-baq-c70] {
+                margin-top: -25px
+            }
+
+            .h_clear_bottom[_ngcontent-baq-c70] {
+                height: 245px;
+                background-color: #2e3192
+            }
+        }
+
+        .overlay_shadow[_ngcontent-baq-c70] {
+            position: absolute;
+            background: rgba(0, 0, 0, .47058823529411764);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0
+        }
+
+        .tabActive[_ngcontent-baq-c70] {
+            border-bottom: 5px solid #fb792b
+        }
+
+        .tabView[_ngcontent-baq-c70] {
+            padding: 18px 10px 8px;
+            cursor: pointer
+        }
+    </style>
+    <style>
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .5
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .5
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .blinking[_ngcontent-baq-c67] {
+            -webkit-animation: blinker 3s linear infinite;
+            animation: blinker 3s linear infinite
+        }
+
+        @-webkit-keyframes blinker {
+            50% {
+                opacity: 0;
+                text-shadow: 0 0 20px red, 0 0 25px #fbff00
+            }
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+                text-shadow: 0 0 20px red, 0 0 25px #fbff00
+            }
+        }
+    </style>
+    <style>
+        .table[_ngcontent-baq-c68] {
+            width: 100% !important
+        }
+
+        .table[_ngcontent-baq-c68]>thead[_ngcontent-baq-c68]>tr[_ngcontent-baq-c68]>th[_ngcontent-baq-c68] {
+            padding: 10px !important
+        }
+
+        .brdrTop[_ngcontent-baq-c68] {
+            border-color: currentcolor #fff #fff;
+            border-top: 5px solid #fff
+        }
+    </style>
+    <script type="text/javascript" src="https://sdk.irctc.corover.ai/askdisha-bucket/chatbotlib.min.js?65735735"
+        async=""></script>
+    <meta http-equiv="origin-trial"
+        content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <meta http-equiv="origin-trial"
+        content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <meta http-equiv="origin-trial"
+        content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+    <meta http-equiv="origin-trial"
+        content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+    <script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202402130101/pubads_impl.js"
+        async=""></script>
+    <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-122267849-1"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/corover/assets@t77/askdisha-bucket/chatbot_IRCTC_V2.js?1708171863675"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/corover/assets@t77/askdisha-bucket/chatbot_IRCTC_AD.js?1708171863675"></script>
+    <style type="text/css">
+        #div-gpt-ad-1695628181945-0 {
+            position: fixed !important;
+            background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@a1/askdisha-bucket/320_50.gif);
+            background-origin: content-box;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: #ece5db;
+        }
+
+        #div-gpt-ad-1695628300486-0 {
+            display: block !important;
+            background-image: url(https://cdn.jsdelivr.net/gh/corover/assets@a1/askdisha-bucket/300_250.png);
+            background-origin: content-box;
+            background-repeat: no-repeat;
+            background-size: contain !important;
+            background-position: center;
+            min-width: 300px;
+            min-height: 250px;
+        }
+
+        .disha-loader {
+            border: 10px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 10px solid rgb(52, 109, 179);
+            width: 60px;
+            height: 60px;
+            -webkit-animation: disha-spin 1s linear infinite;
+            /* Safari */
+            animation: disha-spin 1s linear infinite;
+            margin-bottom: 20px
+        }
+
+        /* Safari */
+        @-webkit-keyframes disha-spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes disha-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script esp-signal="true" src="https://cdn.prod.uidapi.com/uid2SecureSignal.js"></script>
+    <script esp-signal="true" src="https://cdn.id5-sync.com/api/1.0/esp.js"></script>
+    <script esp-signal="true" src="https://cdn.jsdelivr.net/gh/prebid/shared-id/pubcid.js/docs/pubcid.min.js"></script>
+    <script esp-signal="true" src="https://static.criteo.net/js/ld/publishertag.ids.js"></script>
+    <script esp-signal="true" src="https://oa.openxcdn.net/esp.js"></script>
+    <script
+        src="https://cube.nlpcaptcha.in/index.php/cubes/getCubeBox/eyJrZXkiOiJiODRlZGIzNjg2M2U5MjNhZTNlYmRmNmJhMmQ3YTdmNyIsImN1YmVCb3hJZCI6Im5scEN1YmVCb3gyMDBYMjAwIiwiY3ViZVdpZHRoIjoyMDAsImN1YmVIZWlnaHQiOjIwMH0="
+        language="JavaScript" type="text/javascript"></script>
+    <script charset="utf-8" src="/nget/common-es2015.8b01f58c0bbead0d0042.js"></script>
+    <script charset="utf-8" src="/nget/7-es2015.099f4176a1d2431b77c6.js"></script>
+    <style>
+        .t_c1[_ngcontent-baq-c104] {
+            color: #3c3c3c
+        }
+
+        .bottom-btn[_ngcontent-baq-c104] {
+            bottom: 0;
+            position: absolute;
+            background: #fb792b;
+            width: 100vw
+        }
+
+        .bottom-btn[_ngcontent-baq-c104],
+        .top-btn[_ngcontent-baq-c104] {
+            color: #fff;
+            padding: 12px
+        }
+
+        .top-btn[_ngcontent-baq-c104] {
+            background: #213d77;
+            width: -webkit-fill-available
+        }
+    </style>
+    <style>
+        @media (max-width:991px) and (min-width:768px) {
+            .modifyForm[_ngcontent-baq-c96] .iWidth[_ngcontent-baq-c96] {
+                padding: 10px 25px;
+                margin-right: 0 !important
+            }
+
+            .modifyExchange[_ngcontent-baq-c96] {
+                top: 15px;
+                margin-left: -12px
+            }
+
+            .layer_2[_ngcontent-baq-c96] .sBtn[_ngcontent-baq-c96] {
+                margin-top: 10px !important
+            }
+
+            .mTop20[_ngcontent-baq-c96] {
+                margin-left: 10px
+            }
+        }
+
+        @media (min-width:1465px) {
+            .layer_2[_ngcontent-baq-c96] .sBtn[_ngcontent-baq-c96] {
+                margin-top: 10px;
+                margin-left: -80px
+            }
+        }
+
+        @media (max-width:1302px) and (min-width:991px) {
+            .layer_2[_ngcontent-baq-c96] .sBtn[_ngcontent-baq-c96] {
+                margin-left: -12px;
+                margin-top: 8px
+            }
+
+            .padQuota[_ngcontent-baq-c96] {
+                padding-left: 19px
+            }
+        }
+
+        @media (max-width:1464px) and (min-width:1303px) {
+            .layer_2[_ngcontent-baq-c96] .sBtn[_ngcontent-baq-c96] {
+                margin-left: -55px;
+                margin-top: 8px
+            }
+        }
+
+        @media (max-width:767px) {
+            .layer_2[_ngcontent-baq-c96] .sBtn[_ngcontent-baq-c96] {
+                margin-top: 10px
+            }
+
+            .mobile-pad[_ngcontent-baq-c96] {
+                padding-left: 50px !important;
+                width: 100%
+            }
+        }
+    </style>
+    <style>
+        .N[_ngcontent-baq-c103] {
+            color: #ababab
+        }
+
+        .N[_ngcontent-baq-c103],
+        .Y[_ngcontent-baq-c103] {
+            padding: 0 4px
+        }
+
+        .remove-padding[_ngcontent-baq-c103] {
+            margin: 0 -15px
+        }
+
+        .remove-left-padding[_ngcontent-baq-c103] {
+            margin-left: -15px
+        }
+
+        .remove-right-padding[_ngcontent-baq-c103] {
+            margin-right: -15px
+        }
+
+        body[_ngcontent-baq-c103] .ui-tabmenu[_ngcontent-baq-c103] .ui-tabmenu-nav[_ngcontent-baq-c103] .ui-tabmenuitem[_ngcontent-baq-c103] {
+            border: 0 solid transparent !important;
+            background-color: transparent !important
+        }
+
+        .selected-class[_ngcontent-baq-c103] {
+            background: #fee4d4;
+            border: 1px solid #beab9f
+        }
+
+        .fullWidth[_ngcontent-baq-c103] {
+            width: 99%
+        }
+
+        .halfWidth[_ngcontent-baq-c103] {
+            width: 49.5%
+        }
+
+        .sortQuota[_ngcontent-baq-c103] {
+            padding: 1px !important;
+            white-space: break-spaces !important;
+            width: 99%;
+            font-size: 12px !important;
+            min-height: 60px
+        }
+
+        .blinking[_ngcontent-baq-c103] {
+            color: #be2a2a;
+            -webkit-animation: blinkingText 1s infinite;
+            animation: blinkingText 1s infinite
+        }
+
+        @-webkit-keyframes blinkingText {
+            0% {
+                color: #be2a2a
+            }
+
+            50% {
+                color: #000
+            }
+
+            to {
+                color: #be2a2a
+            }
+        }
+
+        @keyframes blinkingText {
+            0% {
+                color: #be2a2a
+            }
+
+            50% {
+                color: #000
+            }
+
+            to {
+                color: #be2a2a
+            }
+        }
+    </style>
+    <style>
+        .reset[_ngcontent-baq-c100] {
+            border-bottom: 1px solid #cacaca;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            font-size: inherit;
+            margin-bottom: 15px
+        }
+
+        .select-all[_ngcontent-baq-c100] {
+            background: #d2effc;
+            padding: 0 8px;
+            cursor: pointer
+        }
+
+        .filter-div[_ngcontent-baq-c100] {
+            white-space: nowrap;
+            overflow-x: hidden
+        }
+
+        .filter-tm[_ngcontent-baq-c100] {
+            width: 49.5%;
+            padding: 5px 0;
+            text-align: center;
+            margin: 5px 0;
+            font-size: medium
+        }
+
+        .t-t-SV[_ngcontent-baq-c100] {
+            border-left: 12px solid #69b802
+        }
+
+        .t-t-ST[_ngcontent-baq-c100] {
+            border-left: 12px solid #c8d600
+        }
+
+        .t-t-SP[_ngcontent-baq-c100] {
+            border-left: 12px solid #91061d
+        }
+
+        .t-t-S[_ngcontent-baq-c100] {
+            border-left: 12px solid #2570fa
+        }
+
+        .t-t-R[_ngcontent-baq-c100] {
+            border-left: 12px solid #d481fa
+        }
+
+        .t-t-G[_ngcontent-baq-c100] {
+            border-left: 12px solid #a7fbd0
+        }
+
+        .t-t-D[_ngcontent-baq-c100] {
+            border-left: 12px solid #fab700
+        }
+
+        .t-t-O[_ngcontent-baq-c100] {
+            border-left: 12px solid #f9f9f9
+        }
+    </style>
+</head>
+
+
+<body>
+    <script src="../static/static/js/bootstrap.min.js"></script>
+    <script src="../static/static/js/propper.js"></script>
+
+
+    <style type="text/css">
+        .loading_div {
+            background-image: url("./assets/images/loading-min.gif");
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 100px;
+            background-size: 100px 100px;
+        }
+
+        #outer {
+            padding-top: 20vh;
+            width: 100%;
+            text-align: center;
+        }
+
+        .grecaptcha-badge {
+            display: none;
+        }
+
+        #inner {
+            display: inline-block;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999999;
+            background: #fff;
+        }
+
+        #loader {
+            display: block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            width: 80px;
+            height: 80px;
+            margin: -75px 0 0 -75px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #FB792B;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #213D77;
+            -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+        }
+
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #2394F2;
+            -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-4 text-dark">
+                {% include 'header_train.html' %}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-12  bg-light text-dark">
+                <div _ngcontent-baq-c54="" class="col-md-12 clearfix margin-top"></div>
+                <!-- trainContext: {{ trainContext }}
+            seletedClass: {{seletedClass}}
+            arrivalTime:{{arrivalTime}}
+            sourceStn:{{sourceStn}}
+            destStn:{{destStn}}
+            jDate:{{jDate}} -->
+                <app-root _nghost-crj-c12="" ng-version="9.1.13">
+                    <app-home _nghost-crj-c54="" class="ng-star-inserted">
+                        <div _ngcontent-crj-c54="" class="col-xs-12 clearfix margin-top"></div>
+                        <div _ngcontent-crj-c54="" role="contentinfo" id="divMain" class="header-top"
+                            style="min-height: calc(100vh - 400px);">
+                            <div _ngcontent-crj-c54="" style="background: #ffffff;">
+                                <app-passenger-input _nghost-crj-c117="" class="ng-star-inserted">
+                                    <div _ngcontent-crj-c117="" id="psgn-form" class="col-xs-12" style="padding: 0px;">
+                                        <form _ngcontent-crj-c117="" novalidate=""
+                                            class="form-inline ng-untouched ng-pristine ng-valid">
+                                            <div _ngcontent-crj-c117="" class="body_div">
+                                                <div _ngcontent-crj-c117=""
+                                                    class="col-lg-9 col-md-9 col-sm-12 remove-padding">
+                                                    <div _ngcontent-crj-c117=""></div>
+                                                    <div _ngcontent-crj-c117=""
+                                                        class="form-group col-xs-12 border-all zeroPadding">
+                                                        <app-train-header _ngcontent-crj-c117="" _nghost-crj-c77="">
+                                                            <div _ngcontent-crj-c77=""
+                                                                class="no-pad col-xs-12 ng-star-inserted">
+                                                                <div _ngcontent-crj-c77=""
+                                                                    class="dull-back train-Header"><span
+                                                                        _ngcontent-crj-c77=""
+                                                                        class="train-type train-type-O"></span>
+                                                                    <div _ngcontent-crj-c77=""
+                                                                        class="pull-left train-heading">
+                                                                        <strong _ngcontent-crj-c77=""> JHELUM
+                                                                            EXPRESS
+                                                                            (11077)</strong>
+                                                                    </div>
+                                                                    <div _ngcontent-crj-c77="" class="pull-right">
+                                                                        <strong _ngcontent-crj-c77=""><span
+                                                                                _ngcontent-crj-c77=""
+                                                                                class="link ng-star-inserted"><span
+                                                                                    _ngcontent-crj-c77=""
+                                                                                    class="fa fa-map-marker"
+                                                                                    style="font-size: 2rem; padding-right: 10px; margin-top: 7px;"></span></span></strong>
+                                                                    </div>
+                                                                    <div _ngcontent-crj-c77=""
+                                                                        class="hidden-lg hidden-md hiddem-sm col-xs-12 no-pad"
+                                                                        style="margin-top: 7px; font-size: initial;">
+                                                                        <strong _ngcontent-crj-c77=""></strong>
+                                                                    </div>
+                                                                </div>
+                                                                <div _ngcontent-crj-c77="" class="col-xs-12 clearfix"
+                                                                    style="margin-top: 0px;"></div>
+                                                                <div _ngcontent-crj-c77=""
+                                                                    class="train-Header tbis-height">
+                                                                    <div _ngcontent-crj-c77="" style="padding: 0px;"
+                                                                        class="col-sm-9 col-xs-12">
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-5 hidden-xs"><span
+                                                                                _ngcontent-crj-c77=""
+                                                                                class="pull-left"><strong
+                                                                                    _ngcontent-crj-c77=""><span
+                                                                                        _ngcontent-crj-c77=""
+                                                                                        class="ng-star-inserted">17:20</span>
+                                                                                    | PUNE JN</strong><br
+                                                                                    _ngcontent-crj-c77=""><span
+                                                                                    _ngcontent-crj-c77=""
+                                                                                    class="col-xs-12 text-center">Tue,
+                                                                                    20
+                                                                                    Feb</span></span></div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-7 hidden-xs">
+                                                                            <span _ngcontent-crj-c77=""
+                                                                                class="col-xs-3 pull-left line-hr ng-star-inserted"><span
+                                                                                    _ngcontent-crj-c77="">07:18</span></span><span
+                                                                                _ngcontent-crj-c77=""
+                                                                                class="pull-right"><strong
+                                                                                    _ngcontent-crj-c77=""><span
+                                                                                        _ngcontent-crj-c77=""
+                                                                                        class="ng-star-inserted">00:38</span>
+                                                                                    | PACHORA JN </strong><br
+                                                                                    _ngcontent-crj-c77=""><span
+                                                                                    _ngcontent-crj-c77=""
+                                                                                    class="col-xs-12 text-center">Wed,
+                                                                                    21
+                                                                                    Feb</span></span>
+                                                                        </div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-12 clearfix"></div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="hidden-lg hidden-md hidden-sm">
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="time col-xs-4">17:20
+                                                                            </div>
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="col-xs-4 line-hr ng-star-inserted">
+                                                                                <span _ngcontent-crj-c77="">07:18</span>
+                                                                            </div>
+                                                                            <div _ngcontent-crj-c77="" class="col-xs-4">
+                                                                                <span _ngcontent-crj-c77=""
+                                                                                    class="pull-right time">00:38</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-12 clearfix"></div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-12 hidden-lg hidden-md hidden-sm">
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="pull-left">PUNE JN
+                                                                            </div>
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="pull-right">PACHORA JN
+                                                                            </div>
+                                                                        </div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-12 clearfix"></div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-12 hidden-lg hidden-md hidden-sm">
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="pull-left">Tue, 20 Feb
+                                                                            </div>
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="pull-right">Wed, 21
+                                                                                Feb
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div _ngcontent-crj-c77=""
+                                                                    class="form-group col-xs-12 clearfix ng-star-inserted">
+                                                                </div>
+
+                                                                <div _ngcontent-crj-c77=""
+                                                                    class="col-sm-9 col-xs-12 remove-padding text-center">
+                                                                    <span _ngcontent-crj-c77="" class="dull-back"
+                                                                        style="padding: 5px;"><strong
+                                                                            _ngcontent-crj-c77=""><span
+                                                                                _ngcontent-crj-c77=""
+                                                                                style="padding: 2px 0px;">
+                                                                                Sleeper (SL) |
+                                                                            </span><span _ngcontent-crj-c77=""
+                                                                                style="padding: 2px 0px;">General</span></strong></span>
+                                                                </div>
+                                                            </div>
+                                                            <div _ngcontent-crj-c77=""
+                                                                class="col-xs-12 clearfix ng-star-inserted"
+                                                                style="padding-top: 10px;"></div>
+                                                        </app-train-header>
+                                                    </div>
+                                                    <div _ngcontent-crj-c117="" class="col-xs-12 margin"></div>
+                                                    <div _ngcontent-crj-c117="" class="form-group col-xs-12 border-all"
+                                                        style="padding: 0px;">
+                                                        <div _ngcontent-crj-c117="" class="no-pad col-xs-12"></div>
+                                                        <div class="ng-tns-c81-56 ui-panel ui-widget ui-widget-content ui-corner-all"
+                                                            id="ui-panel-12" style="margin-bottom: 10px;">
+                                                            <div class="ng-tns-c81-56 ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all ng-star-inserted"
+                                                                id="ui-panel-12-titlebar">
+                                                                <p-header _ngcontent-crj-c117=""
+                                                                    class="col-xs-11 ng-tns-c81-56"
+                                                                    style="padding: 0px 0px;">
+                                                                    <div _ngcontent-crj-c117=""
+                                                                        class="ui-helper-clearfix">
+                                                                        <span _ngcontent-crj-c117=""
+                                                                            class="ui-panel-title p-heading">Passenger
+                                                                            Details</span>
+                                                                    </div>
+                                                                </p-header>
+
+                                                            </div>
+                                                            <div role="region"
+                                                                class="ui-panel-content-wrapper ng-tns-c81-56 ng-trigger ng-trigger-panelContent"
+                                                                id="ui-panel-12-content" aria-hidden="false"
+                                                                aria-labelledby="ui-panel-12-titlebar"
+                                                                style="opacity: 1;">
+                                                                <div
+                                                                    class="ui-panel-content ui-widget-content ng-tns-c81-56">
+
+                                                                    <div _ngcontent-crj-c117="" class="ng-star-inserted"
+                                                                        style="">
+
+                                                                        <app-passenger _ngcontent-crj-c117=""
+                                                                            _nghost-crj-c111="">
+                                                                            <div class="row" style="width: 50%; padding: 8px;
+                                                                                text-align: center;">
+                                                                                <form id="booking_form" method="post"
+                                                                                    action="/confirm_ticket">
+                                                                                    {% csrf_token %}
+                                                                                    <table id="booking_table"
+                                                                                        class="padding">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>Passenger Name</th>
+                                                                                                <th>Age</th>
+                                                                                                <th>Gender</th>
+                                                                                                <th></th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td><input
+                                                                                                        class="ui-inputtext ui-widget ui-state-default ui-corner-all ui-autocomplete-input ng-star-inserted"
+                                                                                                        type="text"
+                                                                                                        placeholder="Passenger Name"
+                                                                                                        size="24"
+                                                                                                        maxlength="16">
+                                                                                                </td>
+                                                                                                <td><input maxlength="3"
+                                                                                                        size="3"
+                                                                                                        type="number"
+                                                                                                        min="1"
+                                                                                                        class="form-control ng-untouched ng-pristine ng-invalid"
+                                                                                                        placeholder="Age"
+                                                                                                        max="125"></td>
+                                                                                                <td><select
+                                                                                                        class="form-control ng-untouched ng-pristine ng-invalid ng-star-inserted">
+                                                                                                        <option size="7"
+                                                                                                            value="">
+                                                                                                            Gender
+                                                                                                        </option>
+                                                                                                        <option size="7"
+                                                                                                            value="M">
+                                                                                                            Male
+                                                                                                        </option>
+                                                                                                        <option size="7"
+                                                                                                            value="F">
+                                                                                                            Female
+                                                                                                        </option>
+                                                                                                    </select></td>
+                                                                                                <td><a onclick="addRow()"
+                                                                                                        class="fa bi-plus-lg fa-lg btn-add"
+                                                                                                        style="float: right; margin: 1px 1px; color: #a7a7a7;"></a>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <a onclick="removeRow(this)"
+                                                                                                        class="fa fa-remove fa-lg ng-star-inserted btn-remove"
+                                                                                                        style="float: right; margin: 0px 0px; color: #a7a7a7;"></a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </form>
+                                                                                <script>
+                                                                                    function addRow() {
+                                                                                        var table = document.getElementById("booking_table").getElementsByTagName('tbody')[0];
+                                                                                        var newRow = table.insertRow(table.rows.length);
+                                                                                        var cells = [];
+                                                                                        cells[0] = newRow.insertCell(0);
+                                                                                        var input = document.createElement('input');
+                                                                                        input.type = 'text';
+                                                                                        input.className = "ui-inputtext ui-widget ui-state-default ui-corner-all ui-autocomplete-input ng-star-inserted"
+                                                                                        input.placeholder = "Passenger Name"
+                                                                                        input.size = "24"
+                                                                                        input.maxlength = "16"
+                                                                                        cells[0].appendChild(input);
+
+                                                                                        cells[1] = newRow.insertCell(1);
+                                                                                        var input2 = document.createElement('input');
+                                                                                        input2.type = 'number';
+                                                                                        input2.className = "form-control ng-untouched ng-pristine ng-invalid"
+                                                                                        input2.placeholder = "Age"
+                                                                                        input2.size = "3"
+                                                                                        input2.maxlength = "3"
+                                                                                        input2.min = 1
+                                                                                        input2.max = 125
+                                                                                        cells[1].appendChild(input2);
+
+
+
+                                                                                        cells[2] = newRow.insertCell(2);
+                                                                                        var select = document.createElement('select');
+                                                                                        select.className = "form-control ng-untouched ng-pristine ng-invalid ng-star-inserted"
+                                                                                        var option1 = document.createElement('option');
+                                                                                        option1.value = '';
+                                                                                        option1.size = "7"
+                                                                                        option1.textContent = 'Gender';
+                                                                                        var option2 = document.createElement('option');
+                                                                                        option2.value = 'M';
+                                                                                        option2.size = "7"
+                                                                                        option2.textContent = 'Male';
+                                                                                        var option3 = document.createElement('option');
+                                                                                        option3.value = 'F';
+                                                                                        option3.size = "7"
+                                                                                        option3.textContent = 'Female';
+                                                                                        select.appendChild(option1);
+                                                                                        select.appendChild(option2);
+                                                                                        select.appendChild(option3);
+                                                                                        cells[2].appendChild(select);
+
+                                                                                        cells[3] = newRow.insertCell(3);
+                                                                                        var aTag = document.createElement('a');
+                                                                                        aTag.className = 'fa bi-plus-lg fa-lg btn-add';
+                                                                                        aTag.style = 'float: right; margin: 1px 1px; color: #a7a7a7;';
+                                                                                        aTag.onclick = addRow;
+                                                                                        cells[3].appendChild(aTag);
+
+                                                                                        cells[4] = newRow.insertCell(4);
+                                                                                        var aTag2 = document.createElement('a');
+                                                                                        aTag2.className = 'fa fa-remove fa-lg ng-star-inserted btn-remove';
+                                                                                        aTag2.style = 'float: right; margin: 1px 1px; color: #a7a7a7;';
+                                                                                        aTag2.onclick = removeRow;
+                                                                                        cells[4].appendChild(aTag2);
+
+                                                                                    }
+
+                                                                                    function removeRow(anchor) {
+                                                                                        var row = anchor.parentNode.parentNode;
+                                                                                        row.parentNode.removeChild(row);
+                                                                                    }
+
+
+                                                                                    function convertToLabels() {
+                                                                                        var inputs = document.querySelectorAll('input[type="text"]');
+                                                                                        inputs.forEach(function (input) {
+                                                                                            var label = document.createElement("label");
+                                                                                            label.textContent = input.value;
+                                                                                            input.parentNode.replaceChild(label, input);
+                                                                                        });
+
+                                                                                        var inputs = document.querySelectorAll('input[type="number"]');
+                                                                                        inputs.forEach(function (input) {
+                                                                                            var label = document.createElement("label");
+                                                                                            label.textContent = input.value;
+                                                                                            input.parentNode.replaceChild(label, input);
+                                                                                        });
+
+                                                                                        var selects = document.querySelectorAll('select');
+                                                                                        selects.forEach(function (select) {
+                                                                                            var label = document.createElement("label");
+                                                                                            var selectedIndex = select.selectedIndex;
+                                                                                            label.textContent = select.options[selectedIndex].text;
+                                                                                            select.parentNode.replaceChild(label, select);
+                                                                                        });
+
+                                                                                        document.getElementById('continue_btn').style.display = 'none';
+                                                                                        document.getElementById('confirm_btn').style.display = 'inline-block';
+                                                                                    }
+                                                                                </script>
+                                                                            </div>
+                                                                        </app-passenger>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div _ngcontent-crj-c117="" class="col-xs-12 margin"></div>
+
+
+                                                </div>
+                                                <div _ngcontent-crj-c117=""
+                                                    class="col-lg-3 col-md-3 col-sm-12 hidden-xs">
+                                                    <app-fare-summary _ngcontent-crj-c117="">
+                                                        <div id="fare-summary" class="col-xs-12 border-all"
+                                                            style="padding: 0px;">
+                                                            <div class="ng-star-inserted">
+                                                                <p-panel expandicon="fa fa-angle-down"
+                                                                    collapseicon="fa fa-angle-up" class="ng-tns-c81-66">
+                                                                    <div class="ng-tns-c81-66 ui-panel ui-widget ui-widget-content ui-corner-all"
+                                                                        id="ui-panel-17">
+                                                                        <div class="ng-tns-c81-66 ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all ng-star-inserted"
+                                                                            id="ui-panel-17-titlebar">
+                                                                            <p-header class="col-xs-11 ng-tns-c81-66"
+                                                                                style="padding: 0px 0px;">
+                                                                                <div class="ui-helper-clearfix"><span
+                                                                                        class="ui-panel-title p-heading">
+                                                                                        Fare
+                                                                                        Summary </span>
+                                                                                </div>
+                                                                            </p-header>
+                                                                        </div>
+                                                                        <div role="region"
+                                                                            class="ui-panel-content-wrapper ng-tns-c81-66 ng-trigger ng-trigger-panelContent"
+                                                                            id="ui-panel-17-content" aria-hidden="false"
+                                                                            aria-labelledby="ui-panel-17-titlebar"
+                                                                            style="opacity: 1;">
+                                                                            <div
+                                                                                class="ui-panel-content ui-widget-content ng-tns-c81-66">
+                                                                                <div class="col-xs-12 line-def top-header"
+                                                                                    style="position: relative;">
+                                                                                    <span class="pull-left">Total
+                                                                                        Fare</span><span
+                                                                                        class="pull-right">₹
+                                                                                        255</span>
+                                                                                </div>
+
+                                                                                <div class="clearfix ng-tns-c81-66">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </p-panel>
+                                                            </div>
+
+                                                        </div>
+                                                    </app-fare-summary>
+                                                    <div _ngcontent-crj-c117="" class="col-xs-12 hidden-xs"
+                                                        style="margin: 20px auto;">
+                                                        <div _ngcontent-crj-c117="">
+                                                            <button type="button" class="btn btn-info">Back</button>
+                                                            <button type="button" id ="continue_btn"  class="btn btn-info"
+                                                                onclick="convertToLabels()">Continue
+                                                            </button>
+                                                            <button type="submit" id ="confirm_btn" class="btn btn-info"
+                                                                style="display:none;">Confirm
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </app-passenger-input>
+                            </div>
+                        </div>
+                    </app-home>
+                </app-root>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .passenger-details {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .passenger-details th,
+        .passenger-details td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .passenger-details th {
+            background-color: #f2f2f2;
+        }
+
+        .passenger-details tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .print-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .print-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .print-button button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Train Ticket Details</h1>
+        <div>
+            <label><strong> Number:</strong>{{tNum}} </label>
+        </div>
+        <div>
+            <label><strong>Train Number|Name:</strong>{{tName|upper }}</label>
+        </div>
+        <div>
+            <label><strong>Journey Date: </strong>{{jDate}}</label>
+        </div>
+        <div>
+            <label><strong>From Station:</strong> {{sourceStn|upper}}</label><br>
+            <label><strong>To Station:</strong> {{destStn|upper}}</label>
+        </div>
+        <div>
+            <label><strong>Seating Class:</strong> {{sClass}} </label>
+        </div>
+        <div>
+            <label><strong>Boarding Time:</strong> {{arrTime}}</label>
+        </div>
+
+
+        <table id="passenger-details" class="passenger-details">
+            <tr>
+                <th>Passenger Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Seat Number</th>
+                <th>Status</th>
+            </tr>
+            <tbody>
+                {% for p in ticketJsonData.passDetails %}
+                <tr>
+                    <td>{{p.pName}}</td>
+                    <td>{{p.age}}</td>
+                    <td>{{p.gender}}</td>
+                    <td>{{p.seatNum}}</td>
+                    <td>{{p.status}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <!-- Add more rows as needed -->
+        </table>
+
+        <div class="print-button">
+            <button onclick="generatePDF()">Print</button>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <script>
+
+        // function generatePDF() {
+        //     // Send an AJAX request to the server to trigger PDF generation
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open("GET", "/generate_pdf", true);
+        //     xhr.responseType = "blob";  // Receive response as a Blob
+        //     xhr.onload = function () {
+        //         // Create a Blob URL for the PDF
+        //         var blobUrl = URL.createObjectURL(xhr.response);
+                
+        //         // Create a link element to trigger the download
+        //         var link = document.createElement("a");
+        //         link.href = blobUrl;
+        //         link.download = "your_file_name.pdf";  // Specify the file name
+        //         link.click();
+        //     };
+        //     xhr.send();
+        //}
+    </script>
+
+</body>
+
+</html>

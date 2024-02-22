@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="IRCTC Next Generation eTicketing System">
+    <meta name="theme-color" content="#213d77">
+    <title>IRCTC Next Generation eTicketing System</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link async="async" rel="stylesheet" as="style"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link async="async" crossorigin="" rel="stylesheet" as="style"
+        href="https://cdn.jsdelivr.net/npm/primeng@9.0.5/resources/primeng.min.css">
+    <link async="async" crossorigin="" rel="stylesheet" as="style"
+        href="https://cdn.jsdelivr.net/npm/primeng@9.0.5/resources/themes/nova-light/theme.css">
+    <link async="async" crossorigin="" rel="stylesheet" as="style"
+        href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#1976d2">
+
+</head>
+
+
+<body>
+    <script src="../static/static/js/bootstrap.min.js"></script>
+    <script src="../static/static/js/propper.js"></script>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-4 text-dark">
+                {% include 'header_train.html' %}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-12  bg-light text-dark">
+                <div _ngcontent-baq-c54="" class="col-md-12 clearfix margin-top"></div>
+<!--                trainContext: {{ trainContext }}-->
+<!--                seletedClass: {{seletedClass}}-->
+<!--                arrivalTime:{{arrivalTime}}-->
+<!--                sourceStn:{{sourceStn}}-->
+<!--                destStn:{{destStn}}-->
+<!--                jDate:{{jDate}}-->
+                <app-root _nghost-crj-c12="" ng-version="9.1.13">
+                    <app-home _nghost-crj-c54="" class="ng-star-inserted">
+                        <div _ngcontent-crj-c54="" class="col-xs-12 clearfix margin-top"></div>
+                        <div _ngcontent-crj-c54="" role="contentinfo" id="divMain" class="header-top"
+                            style="min-height: calc(100vh - 400px);">
+                            <div _ngcontent-crj-c54="" style="background: #ffffff;">
+                                <app-passenger-input _nghost-crj-c117="" class="ng-star-inserted">
+                                    <div _ngcontent-crj-c117="" id="psgn-form" class="col-xs-12" style="padding: 0px;">
+                                        <form _ngcontent-crj-c117="" action="/confirm_ticket" class="form-inline"
+                                            id="booking_form" method="post">
+
+                                            {% csrf_token %}
+
+
+                                            <div _ngcontent-crj-c117="" class="body_div">
+                                                <div _ngcontent-crj-c117=""
+                                                    class="col-lg-9 col-md-9 col-sm-12 remove-padding">
+                                                    <div _ngcontent-crj-c117=""></div>
+                                                    <div _ngcontent-crj-c117=""
+                                                        class="form-group col-xs-12 border-all zeroPadding">
+                                                        <app-train-header _ngcontent-crj-c117="" _nghost-crj-c77="">
+                                                            <div _ngcontent-crj-c77=""
+                                                                class="no-pad col-xs-12 ng-star-inserted">
+                                                                <div _ngcontent-crj-c77=""
+                                                                    class="dull-back train-Header"><span
+                                                                        _ngcontent-crj-c77=""
+                                                                        class="train-type train-type-O"></span>
+                                                                    <div _ngcontent-crj-c77=""
+                                                                        class="pull-left train-heading mt-3">
+                                                                        <strong _ngcontent-crj-c77="">
+                                                                            {{trainContext|upper}}</strong>
+                                                                    </div>
+
+                                                                    <div _ngcontent-crj-c77=""
+                                                                        class="hidden-lg hidden-md hiddem-sm col-xs-12 no-pad"
+                                                                        style="margin-top: 7px; font-size: initial;">
+                                                                        <strong _ngcontent-crj-c77=""></strong>
+                                                                    </div>
+                                                                </div>
+                                                                <div _ngcontent-crj-c77="" class="col-xs-12 clearfix"
+                                                                    style="margin-top: 0px;"></div>
+                                                                <div _ngcontent-crj-c77=""
+                                                                    class="train-Header tbis-height">
+                                                                    <div _ngcontent-crj-c77="" style="padding: 0px;"
+                                                                        class="col-sm-9 col-xs-12">
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-5 hidden-xs"><span
+                                                                                _ngcontent-crj-c77=""
+                                                                                class="pull-left"><strong
+                                                                                    _ngcontent-crj-c77=""><span
+                                                                                        _ngcontent-crj-c77=""
+                                                                                        class="ng-star-inserted">{{arrivalTime}}</span>
+                                                                                    | {{sourceStn|upper}}</strong><br
+                                                                                    _ngcontent-crj-c77=""><span
+                                                                                    _ngcontent-crj-c77=""
+                                                                                    class="col-xs-12 text-center">{{jDate}}</span></span>
+                                                                        </div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-7 hidden-xs">
+                                                                            <span _ngcontent-crj-c77=""
+                                                                                class="col-xs-3 pull-left line-hr ng-star-inserted"><span
+                                                                                    _ngcontent-crj-c77="">07:18</span></span><span
+                                                                                _ngcontent-crj-c77=""
+                                                                                class="pull-right"><strong
+                                                                                    _ngcontent-crj-c77=""><span
+                                                                                        _ngcontent-crj-c77=""
+                                                                                        class="ng-star-inserted">00:38</span>
+                                                                                    | {{destStn|upper}} </strong><br
+                                                                                    _ngcontent-crj-c77=""><span
+                                                                                    _ngcontent-crj-c77=""
+                                                                                    class="col-xs-12 text-center"></span></span>
+                                                                        </div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-12 clearfix"></div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="hidden-lg hidden-md hidden-sm">
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="time col-xs-4">17:20
+                                                                            </div>
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="col-xs-4 line-hr ng-star-inserted">
+                                                                                <span _ngcontent-crj-c77="">07:18</span>
+                                                                            </div>
+                                                                            <div _ngcontent-crj-c77="" class="col-xs-4">
+                                                                                <span _ngcontent-crj-c77=""
+                                                                                    class="pull-right time">00:38</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-12 clearfix"></div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-12 hidden-lg hidden-md hidden-sm">
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="pull-left">PUNE JN
+                                                                            </div>
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="pull-right">PACHORA JN
+                                                                            </div>
+                                                                        </div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-12 clearfix"></div>
+                                                                        <div _ngcontent-crj-c77=""
+                                                                            class="col-xs-12 hidden-lg hidden-md hidden-sm">
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="pull-left">Tue, 20 Feb
+                                                                            </div>
+                                                                            <div _ngcontent-crj-c77=""
+                                                                                class="pull-right">Wed, 21
+                                                                                Feb
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div _ngcontent-crj-c77=""
+                                                                    class="form-group col-xs-12 clearfix ng-star-inserted">
+                                                                </div>
+
+                                                                <div _ngcontent-crj-c77=""
+                                                                    class="col-sm-9 col-xs-12 remove-padding text-center">
+
+                                                                    <span _ngcontent-crj-c77="" class="dull-back"
+                                                                        style="padding: 5px;">
+                                                                        <strong _ngcontent-crj-c77="">
+                                                                            <span _ngcontent-crj-c77=""
+                                                                                style="padding: 2px 0px;">
+                                                                                {% if 'seletedClass' == 'SL' %}
+                                                                                Sleeper (SL) |
+                                                                                {% else %}
+                                                                                AC 3 Tier (3A) |
+                                                                                {% endif %}
+                                                                            </span>
+
+                                                                            <span _ngcontent-crj-c77=""
+                                                                                style="padding: 2px 0px;">
+                                                                                General</span>
+                                                                        </strong>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div _ngcontent-crj-c77=""
+                                                                class="col-xs-12 clearfix ng-star-inserted"
+                                                                style="padding-top: 10px;"></div>
+                                                        </app-train-header>
+                                                    </div>
+                                                    <div _ngcontent-crj-c117="" class="col-xs-12 margin"></div>
+                                                    <div _ngcontent-crj-c117="" class="form-group col-xs-12 border-all"
+                                                        style="padding: 0px;">
+                                                        <div _ngcontent-crj-c117="" class="no-pad col-xs-12"></div>
+                                                        <div class="ng-tns-c81-56 ui-panel ui-widget ui-widget-content ui-corner-all"
+                                                            id="ui-panel-12" style="margin-bottom: 10px;">
+                                                            <div class="ng-tns-c81-56 ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all ng-star-inserted"
+                                                                id="ui-panel-12-titlebar">
+                                                                <p-header _ngcontent-crj-c117=""
+                                                                    class="col-xs-11 ng-tns-c81-56"
+                                                                    style="padding: 0px 0px;">
+                                                                    <div _ngcontent-crj-c117=""
+                                                                        class="ui-helper-clearfix">
+                                                                        <span _ngcontent-crj-c117=""
+                                                                            class="ui-panel-title p-heading">Passenger
+                                                                            Details</span>
+                                                                    </div>
+                                                                </p-header>
+
+                                                            </div>
+                                                            <div role="region"
+                                                                class="ui-panel-content-wrapper ng-tns-c81-56 ng-trigger ng-trigger-panelContent"
+                                                                id="ui-panel-12-content" aria-hidden="false"
+                                                                aria-labelledby="ui-panel-12-titlebar"
+                                                                style="opacity: 1;">
+                                                                <div
+                                                                    class="ui-panel-content ui-widget-content ng-tns-c81-56">
+
+                                                                    <div _ngcontent-crj-c117="" class="ng-star-inserted"
+                                                                        style="">
+
+                                                                        <app-passenger _ngcontent-crj-c117=""
+                                                                            _nghost-crj-c111="">
+                                                                            <div class="row" style="width: 50%; padding: 8px;
+                                                                                text-align: center;">
+
+                                                                                <table id="booking_table"
+                                                                                    class="padding">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Passenger Name</th>
+                                                                                            <th>Age</th>
+                                                                                            <th>Gender</th>
+                                                                                            <th></th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody class="mt-3">
+                                                                                        <tr>
+                                                                                            <td><input
+                                                                                                    class="ui-inputtext ui-widget ui-state-default ui-corner-all ui-autocomplete-input ng-star-inserted"
+                                                                                                    type="text"
+                                                                                                    name="pName"
+                                                                                                    placeholder="Passenger Name"
+                                                                                                    size="24"
+                                                                                                    maxlength="16">
+                                                                                            </td>
+                                                                                            <td><input maxlength="3"
+                                                                                                    size="3"
+                                                                                                    type="number"
+                                                                                                    name="age" min="1"
+                                                                                                    class="form-control ng-untouched ng-pristine ng-invalid"
+                                                                                                    placeholder="Age"
+                                                                                                    max="125"></td>
+                                                                                            <td><select name="gender"
+                                                                                                    class="form-control ng-untouched ng-pristine ng-invalid ng-star-inserted">
+                                                                                                    <option size="7"
+                                                                                                        value="">
+                                                                                                        Gender
+                                                                                                    </option>
+                                                                                                    <option size="7"
+                                                                                                        value="M">
+                                                                                                        Male
+                                                                                                    </option>
+                                                                                                    <option size="7"
+                                                                                                        value="F">
+                                                                                                        Female
+                                                                                                    </option>
+                                                                                                </select></td>
+                                                                                            <td><a onclick="addRow()"
+                                                                                                    class="fa bi-plus-lg fa-lg btn-add"
+                                                                                                    style="float: right; margin: 1px 1px; color: #a7a7a7;"></a>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <a onclick="removeRow(this)"
+                                                                                                    class="fa fa-remove fa-lg ng-star-inserted btn-remove"
+                                                                                                    style="float: right; margin: 0px 0px; color: #a7a7a7;"></a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                                <input type="hidden" id="payment"
+                                                                                    name="payment" value="">
+
+                                                                                <input type="hidden" id="jsonData"
+                                                                                    name="jsonData" value="">
+
+                                                                                <script>
+                                                                                    function addRow() {
+                                                                                        var table = document.getElementById("booking_table").getElementsByTagName('tbody')[0];
+                                                                                        var newRow = table.insertRow(table.rows.length);
+                                                                                        var cells = [];
+                                                                                        cells[0] = newRow.insertCell(0);
+                                                                                        var input = document.createElement('input');
+                                                                                        input.type = 'text';
+                                                                                        input.name = "pName"
+                                                                                        input.className = "ui-inputtext ui-widget ui-state-default ui-corner-all ui-autocomplete-input ng-star-inserted"
+                                                                                        input.placeholder = "Passenger Name"
+                                                                                        input.size = "24"
+                                                                                        input.maxlength = "16"
+                                                                                        cells[0].appendChild(input);
+
+                                                                                        cells[1] = newRow.insertCell(1);
+                                                                                        var input2 = document.createElement('input');
+                                                                                        input2.type = 'number';
+                                                                                        input2.name = "age"
+                                                                                        input2.className = "form-control ng-untouched ng-pristine ng-invalid"
+                                                                                        input2.placeholder = "Age"
+                                                                                        input2.size = "3"
+                                                                                        input2.maxlength = "3"
+                                                                                        input2.min = 1
+                                                                                        input2.max = 125
+                                                                                        cells[1].appendChild(input2);
+
+
+
+                                                                                        cells[2] = newRow.insertCell(2);
+                                                                                        var select = document.createElement('select');
+                                                                                        select.name = "gender"
+                                                                                        select.className = "form-control ng-untouched ng-pristine ng-invalid ng-star-inserted"
+                                                                                        var option1 = document.createElement('option');
+                                                                                        option1.value = '';
+                                                                                        option1.size = "7"
+                                                                                        option1.textContent = 'Gender';
+                                                                                        var option2 = document.createElement('option');
+                                                                                        option2.value = 'M';
+                                                                                        option2.size = "7"
+                                                                                        option2.textContent = 'Male';
+                                                                                        var option3 = document.createElement('option');
+                                                                                        option3.value = 'F';
+                                                                                        option3.size = "7"
+                                                                                        option3.textContent = 'Female';
+                                                                                        select.appendChild(option1);
+                                                                                        select.appendChild(option2);
+                                                                                        select.appendChild(option3);
+                                                                                        cells[2].appendChild(select);
+
+                                                                                        cells[3] = newRow.insertCell(3);
+                                                                                        var aTag = document.createElement('a');
+                                                                                        aTag.className = 'fa bi-plus-lg fa-lg btn-add';
+                                                                                        aTag.style = 'float: right; margin: 1px 1px; color: #a7a7a7;';
+                                                                                        aTag.onclick = addRow;
+                                                                                        cells[3].appendChild(aTag);
+
+                                                                                        cells[4] = newRow.insertCell(4);
+                                                                                        var aTag2 = document.createElement('a');
+                                                                                        aTag2.className = 'fa fa-remove fa-lg ng-star-inserted btn-remove';
+                                                                                        aTag2.style = 'float: right; margin: 1px 1px; color: #a7a7a7;';
+                                                                                        aTag2.onclick = removeRow;
+                                                                                        cells[4].appendChild(aTag2);
+
+                                                                                    }
+
+                                                                                    function removeRow(anchor) {
+                                                                                        var row = anchor.parentNode.parentNode;
+                                                                                        row.parentNode.removeChild(row);
+                                                                                    }
+
+
+                                                                                    function convertToLabels() {
+                                                                                        savePassengerDetails();
+
+                                                                                        var inputs = document.querySelectorAll('input[type="text"]');
+                                                                                        inputs.forEach(function (input) {
+                                                                                            var label = document.createElement("label");
+                                                                                            label.textContent = input.value;
+                                                                                            input.parentNode.replaceChild(label, input);
+                                                                                        });
+
+                                                                                        var inputs = document.querySelectorAll('input[type="number"]');
+                                                                                        inputs.forEach(function (input) {
+                                                                                            var label = document.createElement("label");
+                                                                                            label.textContent = input.value;
+                                                                                            input.parentNode.replaceChild(label, input);
+                                                                                        });
+
+                                                                                        var selects = document.querySelectorAll('select');
+                                                                                        selects.forEach(function (select) {
+                                                                                            var label = document.createElement("label");
+                                                                                            var selectedIndex = select.selectedIndex;
+                                                                                            label.textContent = select.options[selectedIndex].text;
+                                                                                            select.parentNode.replaceChild(label, select);
+                                                                                        });
+
+                                                                                        document.getElementById('continue_btn').style.display = 'none';
+                                                                                        document.getElementById('confirm_btn').style.display = 'inline-block';
+
+                                                                                        <!-- update total fare-->
+                                                                                        var table = document.getElementById("booking_table").getElementsByTagName('tbody')[0];
+                                                                                        var ticketFare = parseInt("{{tFare}}") * parseInt(table.rows.length)
+                                                                                        var totalFareTag = document.getElementById('totalFare')
+                                                                                        totalFareTag.innerHTML = "₹" + ticketFare.toString()
+                                                                                        totalFareTag.style.display = 'inline-block';
+
+
+                                                                                        console.log("setting total fare")
+                                                                                        var totalHidden = document.getElementById('payment')
+                                                                                        totalHidden.value = ticketFare.toString()
+                                                                                        console.log("totalfare ", ticketFare.toString())
+
+
+                                                                                    }
+
+                                                                                    function savePassengerDetails() {
+
+                                                                                        var data = {};
+                                                                                        data['tName'] = "{{trainContext}}"
+                                                                                        data['jDate'] = "{{jDate}}"
+                                                                                        data['sourceStn'] = "{{sourceStn}}"
+                                                                                        data['destStn'] = "{{destStn}}"
+                                                                                        data['sClass'] = "{{seletedClass}}"
+                                                                                        data['arrTime'] = "{{arrivalTime}}"
+                                                                                        data['tStatus'] = "{{tStatus}}"
+                                                                                        data['tCount'] = "{{tCount}}"
+
+                                                                                        //read all tr from booking_table -> tbody
+                                                                                        var tableRows = document.querySelectorAll("#booking_table tbody tr");
+                                                                                        var rowData = [];
+
+                                                                                        // Iterate over each table row
+                                                                                        tableRows.forEach(function (row) {
+                                                                                            var inputs = row.querySelectorAll("input, number, select");
+                                                                                            var rowDataItem = {};
+
+                                                                                            // Iterate over each input/number/select element in the row
+                                                                                            inputs.forEach(function (input) {
+                                                                                                // Get the input's name and value
+                                                                                                var inputName = input.getAttribute("name");
+                                                                                                var inputValue = input.value;
+
+                                                                                                // Add the input name and value to the row data
+                                                                                                rowDataItem[inputName] = inputValue;
+                                                                                            });
+
+                                                                                            // Add the row data to the overall table data
+                                                                                            rowData.push(rowDataItem);
+                                                                                        });
+                                                                                        data['passDetails'] = rowData
+                                                                                        var jsonData = JSON.stringify(data);
+
+                                                                                        document.getElementById('jsonData').value = jsonData;
+                                                                                    }
+
+
+                                                                                </script>
+                                                                            </div>
+                                                                        </app-passenger>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div _ngcontent-crj-c117="" class="col-xs-12 margin"></div>
+
+
+                                                </div>
+                                                <div _ngcontent-crj-c117=""
+                                                    class="col-lg-3 col-md-3 col-sm-12 hidden-xs">
+                                                    <app-fare-summary _ngcontent-crj-c117="">
+                                                        <div id="fare-summary" class="col-xs-12 border-all"
+                                                            style="padding: 0px;">
+                                                            <div class="ng-star-inserted">
+                                                                <p-panel expandicon="fa fa-angle-down"
+                                                                    collapseicon="fa fa-angle-up" class="ng-tns-c81-66">
+                                                                    <div class="ng-tns-c81-66 ui-panel ui-widget ui-widget-content ui-corner-all"
+                                                                        id="ui-panel-17">
+                                                                        <div class="ng-tns-c81-66 ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all ng-star-inserted"
+                                                                            id="ui-panel-17-titlebar">
+                                                                            <p-header class="col-xs-11 ng-tns-c81-66"
+                                                                                style="padding: 0px 0px;">
+                                                                                <div class="ui-helper-clearfix"><span
+                                                                                        class="ui-panel-title p-heading">
+                                                                                        Fare
+                                                                                        Summary </span>
+                                                                                </div>
+                                                                            </p-header>
+                                                                        </div>
+                                                                        <div role="region"
+                                                                            class="ui-panel-content-wrapper ng-tns-c81-66 ng-trigger ng-trigger-panelContent"
+                                                                            id="ui-panel-17-content" aria-hidden="false"
+                                                                            aria-labelledby="ui-panel-17-titlebar"
+                                                                            style="opacity: 1;">
+                                                                            <div
+                                                                                class="ui-panel-content ui-widget-content ng-tns-c81-66">
+                                                                                <div class="col-xs-12 line-def top-header"
+                                                                                    style="position: relative;">
+                                                                                    <span class="pull-left">Ticket
+                                                                                        Fare</span><span
+                                                                                        class="pull-right">₹
+                                                                                        {{tFare}}</span>
+                                                                                </div>
+                                                                                <div class="col-xs-12 line-def top-header"
+                                                                                    style="position: relative">
+                                                                                    <span class="pull-left">Total
+                                                                                        Fare</span><span id="totalFare"
+                                                                                        class="pull-right"
+                                                                                        style="display: none;">₹{{tFare}}
+                                                                                    </span>
+                                                                                </div>
+
+                                                                                <div class="clearfix ng-tns-c81-66">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </p-panel>
+                                                            </div>
+
+                                                        </div>
+                                                    </app-fare-summary>
+                                                    <div _ngcontent-crj-c117="" class="col-xs-12 hidden-xs"
+                                                        style="margin: 20px auto;">
+                                                        <div _ngcontent-crj-c117="">
+                                                            <button type="button" class="btn btn-info">Back</button>
+                                                            <button type="button" id="continue_btn" class="btn btn-info"
+                                                                onclick="convertToLabels()">Continue
+                                                            </button>
+                                                            <button type="submit" id="confirm_btn"
+                                                                class="btn btn-warning" style="display:none;">Confirm
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </app-passenger-input>
+                            </div>
+                        </div>
+                    </app-home>
+                </app-root>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
