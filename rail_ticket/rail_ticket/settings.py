@@ -19,7 +19,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 STATICFILES_DIRS=(os.path.join(Path(__file__).resolve().parent.parent, 'static'),)
 
 
-
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_COOKIE_NAME = 'sessionid'
+SESSION_COOKIE_HTTPONLY = True
 
 
 # Quick-start development settings - unsuitable for production
@@ -55,6 +57,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 
 ROOT_URLCONF = 'rail_ticket.urls'
 

@@ -86,7 +86,7 @@ def ticket_details(request):
 
 
 def book_ticket(request):
-    # if request.user.is_authenticated:
+    #if request.user.is_authenticated:
     if request.method == 'POST':
         context = {}
         seletedClass = request.POST['seletedClass']
@@ -193,6 +193,7 @@ def print_ticket(request):
     return render(request, 'print_ticket.html', context)
 
 
+
 def generate_ticket_number():
     while True:
         # Generate a random 6-digit number
@@ -232,10 +233,10 @@ def login(request):
             return render(request, 'login.html', context)
 
         else:
-            u = authenticate(username=uname,
-                             password=upass)  # is work as select qurey...when user name password not match is written none
+            u = authenticate(request, username=uname,password=upass)  # is work as select qurey...when user name password not match is written none
             if u is not None:
                 return redirect('/home')
+            
             else:
                 context['Errormsg'] = "Invalid username and password"
                 return render(request, 'login.html', context)

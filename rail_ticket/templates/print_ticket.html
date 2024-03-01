@@ -61,8 +61,23 @@
             cursor: pointer;
         }
 
-        .print-button button:hover {
-            background-color: #0056b3;
+        .print-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .home-button button {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: rgb(55, 255, 0);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .home-button button:hover {
+            background-color: #00b315;
         }
     </style>
 </head>
@@ -116,6 +131,7 @@
 
         <div class="print-button">
             <button onclick="generatePDF()">Print</button>
+            <a href="/home" ><button  >Home</button></a>
         </div>
 
 
